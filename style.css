@@ -1,0 +1,206 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+.to-do-container{
+    width: 600px;
+    margin: 40px auto 0px;
+    padding: 10px 15px;
+}
+
+.to-do-container .heading{
+    background-color: #005f00;
+    width: 100%;
+    padding: 10px 15px;
+    position: relative;
+}
+.to-do-container .heading .enter{
+    width: calc(100% - 15px);
+    padding: 10px 15px;
+    background-color:#00c200;
+    border: none;
+    color: #f8f8f8;
+    font-size: 18px;
+}
+.to-do-container .heading .enter:focus{
+    outline: none;
+}
+.to-do-container .heading .plus{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #f8f8f8;
+    border-radius: 50%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 38px;
+    line-height: 40px;
+    cursor: pointer;
+    right: 12px;
+    color: #00c200;
+    transition:  transform 0.3s;
+}
+.to-do-container .heading .plus:hover{
+    transform: rotate(90deg);
+}
+.to-do-container .task-content{
+    padding: 15px;
+    overflow: hidden;
+    background-color: #efeaea;
+}
+.to-do-container .task-content .no-message{
+    color: #777;
+}
+.to-do-container .task-content > span{
+    display: block;
+    background-color: white;
+    padding: 15px;
+}
+.to-do-container .task-content > span:not(:last-child)
+{
+    margin-bottom: 10px;
+}
+.to-do-container .task-content .task-box.finished{
+    text-decoration: line-through;
+}
+.to-do-container .task-content .task-box .delete{
+    float: right;
+    background-color: #e05238;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 12px;
+    color: #f8f8f8;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+.to-do-container .tasks-status{
+    padding: 10px;
+    overflow: hidden;
+}
+.to-do-container .tasks-status .nums_tasks span {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    padding: 5px 10px;
+    background-color: #3838e0;
+}
+
+.to-do-container .tasks-status .task-completed{
+    float: right;
+}
+.to-do-container .tasks-status .task-completed span{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    padding: 5px 10px;
+    background-color: #3838e0;
+}
+.deletion{
+    display: block;
+    margin: 100px auto;
+    width: 570px;
+    background-color: #cccccc;
+    overflow: hidden;
+}
+.deletion .sp1{
+    float: left;
+    padding: 10px;
+}
+.deletion .sp2{
+    float: right;
+    padding: 10px;
+}
+.deletion .sp1 button,
+.deletion .sp2 button{
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    color: #f8f8f8;
+    background-color: #ff9900;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.3s;
+}
+.deletion .sp1 button:hover,
+.deletion .sp2 button:hover{
+    transform: scale(1.1);
+}
+@media(min-width:150px) and (max-width:368px)
+{
+    .to-do-container{
+        width:100% ;
+    }
+    .deletion{
+        width: 100%;
+    }
+    .deletion .sp1,
+    .deletion .sp2{
+        width: 50%;
+        font-size: 12px;
+    }
+    .deletion .sp1 .AllTasks,
+    .deletion .sp2 .AllFinished{
+        padding: 5px;
+        font-size: 12px;
+    }
+}
+
+@media(min-width:368px) and (max-width:480px)
+{
+    .to-do-container{
+        width:100% ;
+    }
+    .deletion{
+        width: 100%;
+    }
+    .deletion .sp1,
+    .deletion .sp2{
+        font-size: 13px;
+    }
+    .deletion .sp1 .AllTasks,
+    .deletion .sp2 .AllFinished{
+        padding: 7px;
+        font-size: 14px;
+    }
+}
+@media(min-width:480px) and (max-width:840px)
+{
+    .to-do-container{
+        width:80%;
+    }
+    .deletion{
+        width: 80%;
+    }
+    .deletion .sp1,
+    .deletion .sp2{
+        font-size: 15px;
+    }
+    .deletion .sp1 .AllTasks,
+    .deletion .sp2 .AllFinished{
+        padding: 7px;
+        font-size: 16px;
+    }
+}
+@media(min-width:840px)
+{
+    .to-do-container{
+        width:600px;
+    }
+    .deletion{
+        width: 600px;
+    }
+}

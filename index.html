@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="to-do-container">
+        <div class="heading">
+            <input type="text" class="enter">
+            <span class="plus">+</span>
+        </div>
+        <div class="task-content">
+            <span class="no-message">No Tasks To Show</span>
+        </div>
+        <div class="tasks-status">
+            <span class="nums_tasks">
+                Tasks
+                <span>0</span>
+            </span>
+            <span class="task-completed">
+                Compilted <span>0</span>
+            </span>
+        </div>
+    </div>
+    <span class="deletion">
+     <span class="sp1">
+        <label for="del1">Delete Tasks:</label>
+        <button class="AllTasks">Delete</button>
+     </span>
+      <span class="sp2">
+        <label for="del2">Delete Complited:</label>
+        <button class="AllFinished">Delete</button>
+      </span>
+    </span>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
